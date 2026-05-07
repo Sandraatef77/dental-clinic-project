@@ -1,0 +1,319 @@
+* {
+    box-sizing: border-box;
+    text-transform: capitalize;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+
+:root {
+    --btnbackground-color: rgb(33, 127, 151);
+    --main-color: black;
+    --mainbackground-color: #f6f8fb;
+    --border-color: gray;
+    --color-text: white;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.nav {
+    position: fixed;
+    content: "";
+    gap: 20px;
+    width: 100%;
+    height: 70px;
+    align-items: center;
+    box-shadow: 0 2px 5px var(--border-color);
+    background-color: transparent;
+    margin-top: 0;
+
+}
+
+.logo {
+
+    background-color: transparent;
+    align-items: center;
+    margin: -50px -10px;
+}
+
+.logo-name {
+    text-transform: capitalize;
+    font-size: 20px;
+}
+
+.pages {
+    background-color: transparent;
+    display: flex;
+    flex: 1;
+}
+
+.page {
+    list-style: none;
+    gap: 20px;
+    flex: 1;
+    justify-content: flex-end;
+    font-weight: bold;
+
+
+}
+
+.page li {
+    cursor: pointer;
+}
+
+.btn {
+    background-color: var(--btnbackground-color);
+    padding: 10px;
+    border: 3px solid var(--btnbackground-color);
+    border-radius: 20px;
+    color: var(--color-text);
+    text-transform: capitalize;
+    margin: 0 10px 0 20px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    transition: .7s ease-in-out all .5s;
+    padding: 20px 15px;
+}
+
+.main {
+    background-image: url(smile.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 20px auto;
+    padding: 100px 20px;
+    height: 500px;
+    background-position: center;
+    text-align: left;
+    font-size: 20px;
+}
+
+
+
+.text {
+    font-size: 20px;
+
+}
+
+.btn2 {
+    background-color: var(--btnbackground-color);
+    color: var(--color-text);
+    border-radius: 10px;
+    border: 5px solid var(--btnbackground-color);
+    cursor: pointer;
+    padding: 10px;
+
+}
+
+
+.btn2:hover {
+    transition: .7s ease-in-out all .5s;
+    padding: 15px;
+}
+
+.btn3 {
+    padding: 10px;
+    border: 3px solid rgba(128, 128, 128, 0.611);
+    border-radius: 10px;
+    cursor: pointer;
+
+}
+
+.tools {
+
+    margin: 0 10px;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0 2px 2px var(--border-color);
+}
+
+.self-care,
+.modern-equipment,
+.expert-team {
+    border: 5px solid var(--color-text);
+    border-radius: 10px;
+    background-color: #d5dde0;
+    text-align: center;
+    padding: 10px;
+    width: 300px;
+}
+
+
+
+h2 {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    justify-content: center;
+}
+
+h2::after,
+h2::before {
+    content: "";
+    height: 2px;
+    background-color: var(--border-color);
+    display: flex;
+    align-items: center;
+    flex: 0.2;
+
+
+}
+
+.our-services {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 2px 2px var(--border-color);
+    text-align: center;
+    margin: 0 10px;
+}
+
+.title h2 {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.title h2::after,
+.title h2::before {
+    content: "";
+    height: 2px;
+    background-color: var(--border-color);
+    display: flex;
+    align-items: center;
+    flex-grow: 0.2;
+}
+
+.services {
+    display: flex;
+    width: 100%;
+    gap: 50px;
+    justify-content: space-around;
+    align-items: stretch;
+}
+
+.img-container {
+    width: 200px;
+    height: 200px;
+
+}
+
+.services img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+
+}
+
+.teeth-cleaning,
+.dental-implant,
+.teeth-whitining {
+    border: 5px solid var(--color-text);
+    border-radius: 10px;
+    background-color: #d5dde0;
+    align-items: center;
+    padding: 10px;
+    max-width: 300px;
+}
+
+footer h2 {
+    text-align: center;
+}
+
+.boxes {
+    display: flex;
+    margin: 0 10px;
+    box-shadow: 0 2px 2px var(--border-color);
+    justify-content: space-around;
+    align-items: stretch;
+
+}
+
+.phone-number,
+.email,
+.address {
+    background-color: #d5dde0;
+    border: 5px solid var(--color-text);
+    padding: 10px;
+    border-radius: 20px;
+    width: 300px;
+    align-items: center;
+
+}
+
+@media(max-width:770px) {
+
+    .tools,
+    .services,
+    .boxes {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        /* منع العناصر من النزول لسطر جديد */
+        justify-content: flex-start;
+        /* تبدأ العناصر من اليسار لضمان ظهور السكرول */
+        overflow-x: auto;
+        /* هذا أهم سطر لبقاء العناصر بجانب بعضها */
+        gap: 10px;
+        padding: 15px 5px;
+        -webkit-overflow-scrolling: touch;
+        /* سكرول ناعم للموبايل */
+    }
+
+    .self-care,
+    .modern-equipment,
+    .expert-team,
+    .teeth-cleaning,
+    .dental-implant,
+    .teeth-whitining,
+    .phone-number,
+    .email,
+    .address {
+        flex: 0 0 250px;
+        /* تثبيت عرض الكارت الواحد بـ 250 بكسل ليظهر بجانبه الآخرين */
+        min-height: 200px;
+        /* توحيد الطول */
+        margin-bottom: 5px;
+    }
+
+
+    .img-container {
+        width: 150px;
+        height: 150px;
+        object-fit: contain;
+    }
+
+    .boxes img,
+    .tools img {
+        width: 100px;
+        height: 100px;
+        object-fit: contain;
+    }
+
+    .nav {
+        height: auto;
+        flex-wrap: wrap;
+        padding: 10px;
+    }
+
+    .page {
+        display: none;
+        /* إخفاء القائمة الطويلة في الموبايل لعدم تداخلها مع اللوجو */
+    }
+
+    .main {
+        height: 350px;
+        padding: 50px 10px;
+        font-size: 16px;
+    }
+}
