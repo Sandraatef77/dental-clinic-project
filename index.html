@@ -2,71 +2,69 @@
 <html>
 
 <head>
-    <meta charset="UTA-8">
+    <meta charset="UTF-8">
     <meta name="description" content="this is my clinic">
     <title>Dental clinic</title>
+    <script src="https://kit.fontawesome.com/27aae294f4.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css">
 
 </head>
 
 <body>
     <header>
+
         <nav class="nav flex-row">
             <div class="logo flex-row">
-                <img src="tooth.png" alt="logo-img" class="logo-img">
-                <span class="logo-name">
-                    <strong>alpha dental</strong>
-                </span>
+                <span> <i class="fa-solid fa-tooth" class="flex-center"></i> alpha dental</span>
             </div>
             <div class="pages">
                 <ul class="page flex-row">
-                    <li>home</li>
-                    <li>services</li>
-                    <li>about us</li>
-                    <li>contact</li>
+
+                    <li> <a href="#home">home</a></li>
+                    <li><a href="#services">services</a></li>
+                    <li><a href="#about-us">about us</a></li>
+                    <li><a href="#contact">contact</a></li>
                 </ul>
-                <button class="btn">book appointment</button>
+                <a href="#book appointment" class="btn">book now</a>
             </div>
         </nav>
-        <div class="main">
+        <div class="main" id="home">
             <h1>your perfect smile starts here</h1>
             <p class="text">we offer the best dental care with complete professionalism.</p>
-            <button class="btn2">book appoinment</button>
-            <button class="btn3">learn more</button>
+            <div class="btns flex-row">
+                <a href="#book appointment">book appoinment</a>
+                <a href="#about-us">learn more</a>
+            </div>
         </div>
-
     </header>
-    <section class="tools flex-row">
-        <div class="self-care">
-            <img src="self-care.png" alt="self-care">
-            <h3>self care</h3>
-            <p>we prioritize your safety and comfort</p>
-        </div>
-        <div class="modern-equipment">
-
-            <img src="modern-equipment.png" alt="modern-equipment">
-
-            <h3>modern equipment</h3>
-            <p>latest technology and tools</p>
-        </div>
-        <div class="expert-team">
-
-            <img src="expert team.png" alt="expert-team">
-
-            <h3>expert team</h3>
-            <p>skilled doctores at your service</p>
+    <section class="about-us flex-column" id="about-us">
+        <h2 class="flex-center">about us</h2>
+        <p class="flex-center">we are smile maker that helps you to shine </p>
+        <div class="tools flex-row">
+            <div class="tool-box flex-column">
+                <img src="self-care.png" alt="self-care">
+                <h3>self care</h3>
+                <p>we prioritize your safety and comfort</p>
+            </div>
+            <div class="tool-box flex-column">
+                <img src="modern-equipment.png" alt="modern-equipment">
+                <h3>modern equipment</h3>
+                <p>latest technology and tools</p>
+            </div>
+            <div class="tool-box flex-column">
+                <img src="expert team.png" alt="expert-team">
+                <h3>expert team</h3>
+                <p>skilled doctores at your service</p>
+            </div>
         </div>
     </section>
-    <section class="our-services">
+    <section class="our-services flex-column" id="services">
         <div class="title">
-            <h2>our services</h2>
-            <p>we provide the best dental care services</p>
+            <h2 class="flex-center">our services</h2>
+            <p class="flex-center">we provide the best dental care services</p>
         </div>
-        <br>
-
-
         <div class="services flex-row">
-            <div class="teeth-cleaning flex-column">
+            <div class="services-box flex-column">
                 <div class="img-container">
                     <img src="teeth cleaning.png" alt="teeth-cleaning">
                 </div>
@@ -74,7 +72,7 @@
                 <p>professional cleaning and polishing</p>
             </div>
 
-            <div class="dental-implant flex-column">
+            <div class="services-box flex-column">
                 <div class="img-container">
                     <img src="implant.png" alt="dental-implant">
                 </div>
@@ -82,7 +80,7 @@
                 <p>implant placements and restorations</p>
             </div>
 
-            <div class="teeth-whitining flex-column">
+            <div class="services-box flex-column">
                 <div class="img-container">
                     <img src="teeth whitining.png" alt="teeth-whitining">
                 </div>
@@ -91,26 +89,25 @@
             </div>
         </div>
     </section>
-    <footer class="flex-column">
-        <h2>contact us</h2>
-        <div class="boxes">
-            <div class="phone-number flex-row">
-                <img src="phone-call.png" alt="phone">
-                <div class="content-text">
+    <footer class="flex-column" id="contact">
+        <h2 class="flex-center">contact us</h2>
+        <p class="flex-center">here is how to contact us</p>
+        <div class="boxes flex-row" id="book appointment">
+            <div class="contact-box flex-row flex-center">
+                <i class="fa-solid fa-phone"></i>
+                <div class="content-text flex-column">
                     <h3>phone</h3>
                     <div>54353543545</div>
-
                 </div>
-
             </div>
 
-            <div class="email flex-row">
-                <img src="mail.png" alt="email">
+            <div class="contact-box flex-row flex-center">
+                <i class="fa-regular fa-envelope"></i>
                 <div>alphadental@info.com</div>
             </div>
 
-            <div class="address flex-row">
-                <img src="gps.png" alt="address">
+            <div class="contact-box flex-row flex-center">
+                <i class="fa-solid fa-location-dot"></i>
                 <div class="content-text flex-column">
                     <h3>address</h3>
                     <div>cairo,egypt</div>

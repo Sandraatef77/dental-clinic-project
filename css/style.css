@@ -1,8 +1,13 @@
 * {
     box-sizing: border-box;
     text-transform: capitalize;
-    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
 
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 :root {
@@ -24,26 +29,50 @@
     flex-direction: column;
 }
 
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+header {
+    background-image: url(smile.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+    background-position: center;
+    padding-top: 70px;
+}
 
 .nav {
     position: fixed;
-    content: "";
     gap: 20px;
     width: 100%;
-    height: 70px;
     align-items: center;
-    box-shadow: 0 2px 5px var(--border-color);
+    box-shadow: 0 1px 3px var(--border-color);
     background-color: transparent;
-    margin-top: 0;
+    top: 0;
+    left: 0;
+    z-index: 1000;
 
 }
 
 .logo {
-
     background-color: transparent;
     align-items: center;
-    margin: -50px -10px;
+    padding: 10px;
+}
+
+.logo span {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.logo span i {
+    color: var(--color-text);
+    background-color: var(--btnbackground-color);
+    padding: 5px;
+    border-radius: 50%;
 }
 
 .logo-name {
@@ -55,107 +84,100 @@
     background-color: transparent;
     display: flex;
     flex: 1;
+    gap: 10px;
+    padding: 15px;
+    align-items: center;
 }
 
 .page {
-    list-style: none;
-    gap: 20px;
+    gap: 15px;
     flex: 1;
     justify-content: flex-end;
     font-weight: bold;
+}
 
-
+.pages ul {
+    list-style: none;
 }
 
 .page li {
     cursor: pointer;
 }
 
+.pages ul li a {
+    text-decoration: none;
+    color: black;
+    transition: 0.3s;
+}
+
+.pages ul li a:hover {
+    color: var(--btnbackground-color);
+    font-size: 20px;
+
+}
+
 .btn {
     background-color: var(--btnbackground-color);
     padding: 10px;
-    border: 3px solid var(--btnbackground-color);
     border-radius: 20px;
     color: var(--color-text);
-    text-transform: capitalize;
-    margin: 0 10px 0 20px;
+    display: flex;
+    align-items: center;
     cursor: pointer;
+    text-decoration: none;
+    color: var(--color-text);
+    transition: 0.3s;
 }
 
 .btn:hover {
-    transition: .7s ease-in-out all .5s;
-    padding: 20px 15px;
+    font-size: 20px;
 }
 
 .main {
-    background-image: url(smile.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin: 20px auto;
-    padding: 100px 20px;
-    height: 500px;
-    background-position: center;
-    text-align: left;
-    font-size: 20px;
+    padding: 50px 10px;
+    line-height: 1.5;
+    gap: 5px;
 }
-
-
 
 .text {
     font-size: 20px;
-
 }
 
-.btn2 {
+.btns {
+    padding-top: 15px;
+    gap: 15px;
+}
+
+.btns a:first-of-type {
     background-color: var(--btnbackground-color);
     color: var(--color-text);
     border-radius: 10px;
     border: 5px solid var(--btnbackground-color);
     cursor: pointer;
     padding: 10px;
-
+    text-decoration: none;
+    font-size: 16px;
 }
 
-
-.btn2:hover {
-    transition: .7s ease-in-out all .5s;
-    padding: 15px;
-}
-
-.btn3 {
+.btns a:last-of-type {
     padding: 10px;
-    border: 3px solid rgba(128, 128, 128, 0.611);
+    border: 3px solid var(--btnbackground-color);
     border-radius: 10px;
     cursor: pointer;
-
+    text-decoration: none;
+    color: var(--btnbackground-color);
+    font-size: 16px;
 }
 
-.tools {
-
-    margin: 0 10px;
-    justify-content: space-around;
-    align-items: center;
-    box-shadow: 0 2px 2px var(--border-color);
+.btns a:first-of-type:hover,
+.btns a:last-of-type:hover {
+    transition: .5s ease-in-out all;
+    font-size: 20px;
 }
-
-.self-care,
-.modern-equipment,
-.expert-team {
-    border: 5px solid var(--color-text);
-    border-radius: 10px;
-    background-color: #d5dde0;
-    text-align: center;
-    padding: 10px;
-    width: 300px;
-}
-
-
 
 h2 {
-    display: flex;
-    align-items: center;
     gap: 15px;
-    justify-content: center;
+    padding-top: 10px;
 }
 
 h2::after,
@@ -166,154 +188,126 @@ h2::before {
     display: flex;
     align-items: center;
     flex: 0.2;
-
-
 }
 
-.our-services {
-    display: flex;
-    flex-direction: column;
-    box-shadow: 0 2px 2px var(--border-color);
-    text-align: center;
-    margin: 0 10px;
-}
-
-.title h2 {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-.title h2::after,
-.title h2::before {
-    content: "";
-    height: 2px;
-    background-color: var(--border-color);
-    display: flex;
-    align-items: center;
-    flex-grow: 0.2;
-}
-
-.services {
-    display: flex;
-    width: 100%;
-    gap: 50px;
+.tools {
     justify-content: space-around;
-    align-items: stretch;
+    box-shadow: 0 2px 2px var(--border-color);
 }
 
-.img-container {
-    width: 200px;
-    height: 200px;
-
-}
-
-.services img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-
-}
-
-.teeth-cleaning,
-.dental-implant,
-.teeth-whitining {
+.tool-box {
     border: 5px solid var(--color-text);
     border-radius: 10px;
     background-color: #d5dde0;
     align-items: center;
     padding: 10px;
-    max-width: 300px;
+    gap: 5px;
 }
 
-footer h2 {
-    text-align: center;
+.tool-box img {
+    max-width: 100px;
+    max-width: 100px;
+}
+
+.our-services {
+    box-shadow: 0 2px 2px var(--border-color);
+    gap: 10px;
+}
+
+.services {
+    justify-content: space-around;
+}
+
+.img-container {
+    width: 200px;
+    height: 200px;
+    border-radius: 5px;
+}
+
+.img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.services-box {
+    border: 5px solid var(--color-text);
+    border-radius: 10px;
+    background-color: #d5dde0;
+    align-items: center;
+    padding: 10px;
+    gap: 5px;
+
 }
 
 .boxes {
     display: flex;
-    margin: 0 10px;
     box-shadow: 0 2px 2px var(--border-color);
     justify-content: space-around;
-    align-items: stretch;
-
 }
 
-.phone-number,
-.email,
-.address {
+.contact-box {
     background-color: #d5dde0;
     border: 5px solid var(--color-text);
     padding: 10px;
-    border-radius: 20px;
-    width: 300px;
-    align-items: center;
-
+    border-radius: 10px;
+    gap: 10px;
 }
 
-@media(max-width:770px) {
+.content-text {
+    gap: 5px;
+}
+
+.contact-box i {
+    background-color: var(--btnbackground-color);
+    border-radius: 50%;
+    color: var(--color-text);
+    padding: 5px;
+}
+
+@media(Max-width:970) {
 
     .tools,
     .services,
     .boxes {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        /* منع العناصر من النزول لسطر جديد */
-        justify-content: flex-start;
-        /* تبدأ العناصر من اليسار لضمان ظهور السكرول */
-        overflow-x: auto;
-        /* هذا أهم سطر لبقاء العناصر بجانب بعضها */
-        gap: 10px;
-        padding: 15px 5px;
-        -webkit-overflow-scrolling: touch;
-        /* سكرول ناعم للموبايل */
-    }
-
-    .self-care,
-    .modern-equipment,
-    .expert-team,
-    .teeth-cleaning,
-    .dental-implant,
-    .teeth-whitining,
-    .phone-number,
-    .email,
-    .address {
-        flex: 0 0 250px;
-        /* تثبيت عرض الكارت الواحد بـ 250 بكسل ليظهر بجانبه الآخرين */
-        min-height: 200px;
-        /* توحيد الطول */
-        margin-bottom: 5px;
-    }
-
-
-    .img-container {
-        width: 150px;
-        height: 150px;
-        object-fit: contain;
-    }
-
-    .boxes img,
-    .tools img {
-        width: 100px;
-        height: 100px;
-        object-fit: contain;
-    }
-
-    .nav {
-        height: auto;
         flex-wrap: wrap;
-        padding: 10px;
     }
 
-    .page {
-        display: none;
-        /* إخفاء القائمة الطويلة في الموبايل لعدم تداخلها مع اللوجو */
+    .tool-box,
+    .services-box,
+    .contact-box {
+        flex-basis: calc(30% - 20px);
+    }
+}
+
+@media (max-width:767px) {
+
+    .tools,
+    .services,
+    .boxes {
+        flex-wrap: wrap;
     }
 
-    .main {
-        height: 350px;
-        padding: 50px 10px;
-        font-size: 16px;
+    .tool-box,
+    .services-box,
+    .contact-box {
+        flex-basis: calc(50% - 20px);
+    }
+
+
+}
+
+@media(max-width:576px) {
+
+    .tools,
+    .services,
+    .boxes {
+        flex-wrap: wrap;
+    }
+
+    .tool-box,
+    .services-box,
+    .contact-box {
+        flex-basis: calc(100% - 20px);
     }
 }
